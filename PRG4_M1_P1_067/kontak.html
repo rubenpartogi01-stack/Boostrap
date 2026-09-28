@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Ruben Partogi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar Hitam -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="./index.html">Portofolio Ruben</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./tentang.html">Profil Saya</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Kontainer Formulir -->
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card shadow border-0 rounded-3 p-4 p-md-5">
+                    <h2 class="mb-1 text-center fw-bold">Hubungi Ruben</h2>
+                    <p class="text-center text-muted mb-4">Silakan isi formulir di bawah ini untuk tawaran proyek atau kolaborasi tugas kuliah.</p>
+                    
+                    <form>
+                        <!-- 1. Textbox -->
+                        <div class="mb-3">
+                            <label for="nama" class="form-label fw-semibold">Nama Pengirim</label>
+                            <input type="text" class="form-control bg-light" id="nama" placeholder="Masukkan nama Anda">
+                        </div>
+
+                        <!-- 2. Dropdown List -->
+                        <div class="mb-3">
+                            <label for="keperluan" class="form-label fw-semibold">Tujuan Menghubungi</label>
+                            <select class="form-select bg-light" id="keperluan">
+                                <option selected disabled>-- Pilih Keperluan --</option>
+                                <option value="1">Tawaran Magang / Pekerjaan</option>
+                                <option value="2">Diskusi Proyek IT</option>
+                                <option value="3">Diskusi Tugas Kuliah ASTRAtech</option>
+                                <option value="4">Lainnya</option>
+                            </select>
+                        </div>
+
+                        <!-- 3. Radio Button -->
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold d-block">Platform Menemukan Profil Saya</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sumber" id="sumberLinkedIn" value="LinkedIn">
+                                <label class="form-check-label" for="sumberLinkedIn">LinkedIn</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sumber" id="sumberTeman" value="Teman">
+                                <label class="form-check-label" for="sumberTeman">Rekomendasi Teman</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sumber" id="sumberKampus" value="Kampus">
+                                <label class="form-check-label" for="sumberKampus">Kampus ASTRAtech</label>
+                            </div>
+                        </div>
+
+                        <!-- 4. Text Area -->
+                        <div class="mb-3">
+                            <label for="pesan" class="form-label fw-semibold">Pesan / Detail</label>
+                            <textarea class="form-control bg-light" id="pesan" rows="4" placeholder="Tuliskan pesan Anda secara detail..."></textarea>
+                        </div>
+
+                        <!-- 5. Checkbox -->
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="persetujuan">
+                            <label class="form-check-label text-muted" for="persetujuan">
+                                Saya setuju bahwa informasi yang saya kirimkan adalah benar dan dapat dipertanggungjawabkan.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark w-100 fw-bold py-2">Kirim Pesan ke Ruben</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
