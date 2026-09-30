@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Pencetak Angka - T2_067</title>
+</head>
+<body>
+    <h1>Program Pencetak Angka - T2_067</h1>
+    <div id="hasilOutput" style="font-family: monospace; font-size: 16px; line-height: 1.5;"></div>
+
+    <script>
+        let hasil = [];
+        // Loop dari 1 hingga 100
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                hasil.push("MI2A"); // Kelipatan 3 dan 5 (15)
+            } else if (i % 3 === 0) {
+                hasil.push("MI");   // Kelipatan 3
+            } else if (i % 5 === 0) {
+                hasil.push("2A");   // Kelipatan 5
+            } else {
+                hasil.push(i);      // Angka biasa
+            }
+        }
+        
+        // Menampilkan output ke layar
+        document.getElementById("hasilOutput").innerText = hasil.join(", ");
+    </script>
+</body>
+</html>

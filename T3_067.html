@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min, Max, dan Rata-rata - T3_067</title>
+</head>
+<body>
+    <h1>Hitung Nilai Array - T3_067</h1>
+    <label for="inputArray">Masukkan angka (pisahkan dengan koma): </label>
+    <input type="text" id="inputArray" placeholder="Contoh: 10, 20, 30, 40, 50" style="width: 250px;">
+    <button onclick="hitungNilai()">Hitung</button>
+
+    <div id="result" style="margin-top: 20px;"></div>
+
+    <script>
+        // Fungsi untuk menghitung nilai min, max, dan rata-rata
+        function analisisArray(arr) {
+            const min = Math.min(...arr);
+            const max = Math.max(...arr);
+            const total = arr.reduce((acc, val) => acc + val, 0);
+            const rataRata = total / arr.length;
+            
+            return { min, max, rataRata };
+        }
+
+        function hitungNilai() {
+            const input = document.getElementById('inputArray').value;
+            // Memisahkan input menjadi array angka
+            const arr = input.split(',').map(num => parseFloat(num.trim()));
+
+            // Validasi input
+            if (arr.some(isNaN) || input.trim() === "") {
+                alert("Masukkan array yang valid dengan angka yang benar.");
+                return;
+            }
+
+            const hasil = analisisArray(arr);
+
+            // Menampilkan hasil
+            document.getElementById('result').innerHTML = `
+                <ul>
+                    <li>Nilai Minimum: ${hasil.min}</li>
+                    <li>Nilai Maksimum: ${hasil.max}</li>
+                    <li>Nilai Rata-rata: ${hasil.rataRata}</li>
+                </ul>
+            `;
+        }
+    </script>
+</body>
+</html>
